@@ -1,0 +1,175 @@
+[1mdiff --git a/.idea/compiler.xml b/.idea/compiler.xml[m
+[1mindex ed48694..5612c90 100644[m
+[1m--- a/.idea/compiler.xml[m
+[1m+++ b/.idea/compiler.xml[m
+[36m@@ -2,6 +2,7 @@[m
+ <project version="4">[m
+   <component name="CompilerConfiguration">[m
+     <annotationProcessing>[m
+[32m+[m[32m      <profile default="true" name="Default" enabled="true" />[m
+       <profile name="Maven default annotation processors profile" enabled="true">[m
+         <sourceOutputDir name="target/generated-sources/annotations" />[m
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />[m
+[1mdiff --git a/src/test/java/context/RunContext.java b/src/test/java/context/RunContext.java[m
+[1mindex 72bb507..1b367f0 100644[m
+[1m--- a/src/test/java/context/RunContext.java[m
+[1m+++ b/src/test/java/context/RunContext.java[m
+[36m@@ -1,2 +1,62 @@[m
+[31m-package context;public class RunContext {[m
+[32m+[m[32mpackage context;[m
+[32m+[m
+[32m+[m[32mimport java.util.Map;[m
+[32m+[m[32mimport java.util.concurrent.ConcurrentHashMap;[m
+[32m+[m
+[32m+[m[32mimport static java.lang.Thread.currentThread;[m
+[32m+[m
+[32m+[m[32mpublic enum RunContext {[m
+[32m+[m[32m    RUN_CONTEXT;[m
+[32m+[m
+[32m+[m[32m    private final Map<String, Object> context = new ConcurrentHashMap<>();[m
+[32m+[m
+[32m+[m[32m    RunContext() {[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public void deleteKey(String key) {[m
+[32m+[m[32m        key = wrapKey(key);[m
+[32m+[m[32m        context.remove(key);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public <T> void put(String key, T object) {[m
+[32m+[m[32m        key = wrapKey(key);[m
+[32m+[m[32m        context.put(key, object);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public Object get(String key) {[m
+[32m+[m[32m        key = wrapKey(key);[m
+[32m+[m[32m        Object object;[m
+[32m+[m[32m        try {[m
+[32m+[m[32m            object = context.get(key);[m
+[32m+[m[32m        } catch (NullPointerException e) {[m
+[32m+[m[32m            throw new AssertionError(String.format("Object with key %s doesn't exist!", key));[m
+[32m+[m[32m        }[m
+[32m+[m[32m        return object;[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public String str(String key) {[m
+[32m+[m[32m        key = wrapKey(key);[m
+[32m+[m[32m        Object object;[m
+[32m+[m[32m        try {[m
+[32m+[m[32m            object = context.get(key);[m
+[32m+[m[32m        } catch (NullPointerException e) {[m
+[32m+[m[32m            throw new AssertionError(String.format("Object with key %s doesn't exist!", key));[m
+[32m+[m[32m        }[m
+[32m+[m[32m        return object != null ? object.toString() : null;[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public <T> T get(String key, Class<T> userClass) {[m
+[32m+[m[32m        key = wrapKey(key);[m
+[32m+[m[32m        Object object;[m
+[32m+[m[32m        try {[m
+[32m+[m[32m            object = context.get(key);[m
+[32m+[m[32m        } catch (NullPointerException e) {[m
+[32m+[m[32m            throw new AssertionError(String.format("Object with key %s doesn't exist!", key));[m
+[32m+[m[32m        }[m
+[32m+[m[32m        return userClass.cast(object);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    private String wrapKey(String key) {[m
+[32m+[m[32m        return currentThread().getId() + ":" + key;[m
+[32m+[m[32m    }[m
+ }[m
+[1mdiff --git a/src/test/java/impl/ArticlesServiceImpl.java b/src/test/java/impl/ArticlesServiceImpl.java[m
+[1mindex 27ad2c0..80bd4b6 100644[m
+[1m--- a/src/test/java/impl/ArticlesServiceImpl.java[m
+[1m+++ b/src/test/java/impl/ArticlesServiceImpl.java[m
+[36m@@ -3,6 +3,7 @@[m [mpackage impl;[m
+ import api.Article;[m
+ import config.TestConfig;[m
+ //import groovy.util.logging.Log4j2;[m
+[32m+[m[32mimport context.RunContext;[m
+ import lombok.extern.log4j.Log4j2;[m
+ import io.restassured.response.ValidatableResponse;[m
+ import service.ArticlesService;[m
+[36m@@ -10,6 +11,7 @@[m [mimport service.ArticlesService;[m
+ import java.util.ArrayList;[m
+ import java.util.List;[m
+ [m
+[32m+[m[32mimport static context.RunContext.RUN_CONTEXT;[m
+ import static io.restassured.RestAssured.given;[m
+ [m
+ @Log4j2[m
+[36m@@ -26,6 +28,8 @@[m [mpublic class ArticlesServiceImpl implements ArticlesService {[m
+                 .get(URL)[m
+                 .then().log().ifError();[m
+ [m
+[32m+[m[32m        RUN_CONTEXT.put("response",r);[m
+[32m+[m
+         try {[m
+             articles = r.extract().jsonPath().getList("articles",Article.class);[m
+         }catch (Exception e){[m
+[1mdiff --git a/src/test/java/steps/ArticleMyStepdefs.java b/src/test/java/steps/ArticleMyStepdefs.java[m
+[1mindex 50b9454..a5edac5 100644[m
+[1m--- a/src/test/java/steps/ArticleMyStepdefs.java[m
+[1m+++ b/src/test/java/steps/ArticleMyStepdefs.java[m
+[36m@@ -2,21 +2,32 @@[m [mpackage steps;[m
+ [m
+ import api.Article;[m
+ import impl.ArticlesServiceImpl;[m
+[32m+[m[32mimport io.cucumber.java.sl.In;[m
+[32m+[m[32mimport io.restassured.response.ValidatableResponse;[m
+[32m+[m[32mimport org.junit.Assert;[m
+ import service.ArticlesService;[m
+ [m
+[32m+[m[32mimport javax.print.attribute.IntegerSyntax;[m
+ import java.util.List;[m
+ [m
+[32m+[m[32mimport static context.RunContext.RUN_CONTEXT;[m
+[32m+[m
+ public class ArticleMyStepdefs {[m
+     ArticlesService articlesService = new ArticlesServiceImpl();[m
+ [m
+ [m
+     @io.cucumber.java.en.Given("Get Articles {string} Request")[m
+     public void getArticlesRequest(String url) {[m
+[31m-        List<Article> articlesList = articlesService.getArticles(url);[m
+[31m-        System.out.println(articlesList);[m
+[32m+[m[32m        articlesService.getArticles(url);[m
+[32m+[m
+     }[m
+ [m
+     @io.cucumber.java.en.Then("Response code is: {string}")[m
+     public void responseCodeIs(String status) {[m
+[32m+[m[32m        ValidatableResponse response = RUN_CONTEXT.get("response",ValidatableResponse.class);[m
+[32m+[m[32m        int actualStatus = response.extract().statusCode();[m
+[32m+[m[32m        int expectedStatus = Integer.parseInt(status);[m
+[32m+[m
+[32m+[m[32m        Assert.assertEquals(actualStatus,expectedStatus);[m
+     }[m
+ }[m
+[1mdiff --git a/src/test/resourses/allure.properties b/src/test/resourses/allure.properties[m
+[1mindex e69de29..85039b6 100644[m
+[1m--- a/src/test/resourses/allure.properties[m
+[1m+++ b/src/test/resourses/allure.properties[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mallure.results.directory=target/allyre-results[m
+\ No newline at end of file[m
+[1mdiff --git a/src/test/resourses/features/Article.feature b/src/test/resourses/features/Article.feature[m
+[1mindex 880048a..1941141 100644[m
+[1m--- a/src/test/resourses/features/Article.feature[m
+[1m+++ b/src/test/resourses/features/Article.feature[m
+[36m@@ -6,4 +6,6 @@[m [mFeature: Получить статью[m
+     Then Response code is: "<status>"[m
+     Examples:[m
+     | URL          | status |[m
+[31m-    |article.json  |200     |[m
+\ No newline at end of file[m
+[32m+[m[32m    |article.json  |200     |[m
+[32m+[m[32m    |              |404     |[m
+[32m+[m[32m    |wrong.json    |404     |[m
+\ No newline at end of file[m
+[1mdiff --git a/target/test-classes/impl/ArticlesServiceImpl.class b/target/test-classes/impl/ArticlesServiceImpl.class[m
+[1mindex 88c9db4..767590c 100644[m
+Binary files a/target/test-classes/impl/ArticlesServiceImpl.class and b/target/test-classes/impl/ArticlesServiceImpl.class differ
+[1mdiff --git a/target/test-classes/steps/ArticleMyStepdefs.class b/target/test-classes/steps/ArticleMyStepdefs.class[m
+[1mindex 07fb211..7d7e822 100644[m
+Binary files a/target/test-classes/steps/ArticleMyStepdefs.class and b/target/test-classes/steps/ArticleMyStepdefs.class differ

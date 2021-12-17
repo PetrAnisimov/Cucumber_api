@@ -7,3 +7,5 @@ Feature: Получить статью
     Examples:
     | URL          | status |
     |article.json  |200     |
+    |              |404     |
+    |wrong.json    |404     |

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="RunCucumberTest" time="7.88" tests="3" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="C:\Users\Petr\IdeaProjects\CucumberTests\target\test-classes;C:\Users\Petr\IdeaProjects\CucumberTests\target\classes;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-java\7.1.0\cucumber-java-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-core\7.1.0\cucumber-core-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-gherkin\7.1.0\cucumber-gherkin-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.1.0\cucumber-gherkin-messages-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\tag-expressions\4.1.0\tag-expressions-4.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-expressions\13.0.1\cucumber-expressions-13.0.1.jar;C:\Users\Petr\.m2\repository\io\cucumber\datatable\7.1.0\datatable-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-plugin\7.1.0\cucumber-plugin-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\docstring\7.1.0\docstring-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\create-meta\6.0.4\create-meta-6.0.4.jar;C:\Users\Petr\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-junit\7.1.0\cucumber-junit-7.1.0.jar;C:\Users\Petr\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Petr\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Petr\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.0\junit-jupiter-api-5.8.0.jar;C:\Users\Petr\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Petr\.m2\repository\org\junit\platform\junit-platform-commons\1.8.0\junit-platform-commons-1.8.0.jar;C:\Users\Petr\.m2\repository\org\junit\vintage\junit-vintage-engine\5.8.0\junit-vintage-engine-5.8.0.jar;C:\Users\Petr\.m2\repository\org\junit\platform\junit-platform-engine\1.8.0\junit-platform-engine-1.8.0.jar;C:\Users\Petr\.m2\repository\io\qameta\allure\allure-junit5\2.16.1\allure-junit5-2.16.1.jar;C:\Users\Petr\.m2\repository\io\qameta\allure\allure-junit-platform\2.16.1\allure-junit-platform-2.16.1.jar;C:\Users\Petr\.m2\repository\io\qameta\allure\allure-java-commons\2.16.1\allure-java-commons-2.16.1.jar;C:\Users\Petr\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Petr\.m2\repository\io\qameta\allure\allure-model\2.16.1\allure-model-2.16.1.jar;C:\Users\Petr\.m2\repository\io\qameta\allure\allure-test-filter\2.16.1\allure-test-filter-2.16.1.jar;C:\Users\Petr\.m2\repository\org\junit\platform\junit-platform-launcher\1.8.1\junit-platform-launcher-1.8.1.jar;C:\Users\Petr\.m2\repository\org\projectlombok\lombok\1.18.20\lombok-1.18.20.jar;C:\Users\Petr\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\Petr\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\Petr\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\Petr\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Petr\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Petr\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Petr\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Petr\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Petr\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Petr\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Petr\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\Petr\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\Petr\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\Petr\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\Petr\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\Petr\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\Petr\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\Petr\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\Petr\.m2\repository\org\apache\logging\log4j\log4j-core\2.16.0\log4j-core-2.16.0.jar;C:\Users\Petr\.m2\repository\org\apache\logging\log4j\log4j-api\2.16.0\log4j-api-2.16.0.jar;C:\Users\Petr\.m2\repository\javax\annotation\javax.annotation-api\1.2\javax.annotation-api-1.2.jar;C:\Users\Petr\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\Petr\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.0\jackson-databind-2.13.0.jar;C:\Users\Petr\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.0\jackson-annotations-2.13.0.jar;C:\Users\Petr\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.0\jackson-core-2.13.0.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\Petr\AppData\Local\Temp\surefire15081264597380590253\surefirebooter8614966475656647493.jar C:\Users\Petr\AppData\Local\Temp\surefire15081264597380590253 2021-12-17T11-13-08_547-jvmRun1 surefire11687284467870305808tmp surefire_011559987219826660143tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Petr\IdeaProjects\CucumberTests\target\test-classes;C:\Users\Petr\IdeaProjects\CucumberTests\target\classes;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-java\7.1.0\cucumber-java-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-core\7.1.0\cucumber-core-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-gherkin\7.1.0\cucumber-gherkin-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.1.0\cucumber-gherkin-messages-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\tag-expressions\4.1.0\tag-expressions-4.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-expressions\13.0.1\cucumber-expressions-13.0.1.jar;C:\Users\Petr\.m2\repository\io\cucumber\datatable\7.1.0\datatable-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-plugin\7.1.0\cucumber-plugin-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\docstring\7.1.0\docstring-7.1.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\html-formatter\17.0.0\html-formatter-17.0.0.jar;C:\Users\Petr\.m2\repository\io\cucumber\create-meta\6.0.4\create-meta-6.0.4.jar;C:\Users\Petr\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Petr\.m2\repository\io\cucumber\cucumber-junit\7.1.0\cucumber-junit-7.1.0.jar;C:\Users\Petr\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Petr\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Petr\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.0\junit-jupiter-api-5.8.0.jar;C:\Users\Petr\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Petr\.m2\repository\org\junit\platform\junit-platform-commons\1.8.0\junit-platform-commons-1.8.0.jar;C:\Users\Petr\.m2\repository\org\junit\vintage\junit-vintage-engine\5.8.0\junit-vintage-engine-5.8.0.jar;C:\Users\Petr\.m2\repository\org\junit\platform\junit-platform-engine\1.8.0\junit-platform-engine-1.8.0.jar;C:\Users\Petr\.m2\repository\io\qameta\allure\allure-junit5\2.16.1\allure-junit5-2.16.1.jar;C:\Users\Petr\.m2\repository\io\qameta\allure\allure-junit-platform\2.16.1\allure-junit-platform-2.16.1.jar;C:\Users\Petr\.m2\repository\io\qameta\allure\allure-java-commons\2.16.1\allure-java-commons-2.16.1.jar;C:\Users\Petr\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Petr\.m2\repository\io\qameta\allure\allure-model\2.16.1\allure-model-2.16.1.jar;C:\Users\Petr\.m2\repository\io\qameta\allure\allure-test-filter\2.16.1\allure-test-filter-2.16.1.jar;C:\Users\Petr\.m2\repository\org\junit\platform\junit-platform-launcher\1.8.1\junit-platform-launcher-1.8.1.jar;C:\Users\Petr\.m2\repository\org\projectlombok\lombok\1.18.20\lombok-1.18.20.jar;C:\Users\Petr\.m2\repository\io\rest-assured\rest-assured\4.4.0\rest-assured-4.4.0.jar;C:\Users\Petr\.m2\repository\org\codehaus\groovy\groovy\3.0.8\groovy-3.0.8.jar;C:\Users\Petr\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.8\groovy-xml-3.0.8.jar;C:\Users\Petr\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Petr\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Petr\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Petr\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\Petr\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Petr\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\Petr\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Petr\.m2\repository\io\rest-assured\json-path\4.4.0\json-path-4.4.0.jar;C:\Users\Petr\.m2\repository\org\codehaus\groovy\groovy-json\3.0.8\groovy-json-3.0.8.jar;C:\Users\Petr\.m2\repository\io\rest-assured\rest-assured-common\4.4.0\rest-assured-common-4.4.0.jar;C:\Users\Petr\.m2\repository\io\rest-assured\xml-path\4.4.0\xml-path-4.4.0.jar;C:\Users\Petr\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\Petr\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\Petr\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\Petr\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.3\jaxb-impl-2.3.3.jar;C:\Users\Petr\.m2\repository\org\apache\logging\log4j\log4j-core\2.16.0\log4j-core-2.16.0.jar;C:\Users\Petr\.m2\repository\org\apache\logging\log4j\log4j-api\2.16.0\log4j-api-2.16.0.jar;C:\Users\Petr\.m2\repository\javax\annotation\javax.annotation-api\1.2\javax.annotation-api-1.2.jar;C:\Users\Petr\.m2\repository\io\cucumber\messages\17.1.1\messages-17.1.1.jar;C:\Users\Petr\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.0\jackson-databind-2.13.0.jar;C:\Users\Petr\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.0\jackson-annotations-2.13.0.jar;C:\Users\Petr\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.0\jackson-core-2.13.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Petr"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-10-19"/>
+    <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Petr\IdeaProjects\CucumberTests"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Petr\AppData\Local\Temp\surefire15081264597380590253\surefirebooter8614966475656647493.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.1+12"/>
+    <property name="user.name" value="Petr"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.1+12"/>
+    <property name="localRepository" value="C:\Users\Petr\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\Petr\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.1"/>
+    <property name="user.dir" value="C:\Users\Petr\IdeaProjects\CucumberTests"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.4\bin;C:\Gradle\gradle-7.3.1\bin;C:\Program Files\Git\cmd;C:\Users\Petr\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3\bin;;C:\Users\Petr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.3\bin;;C:\Program Files\apache-maven-3.8.4\bin;;."/>
+    <property name="junit.jupiter.extensions.autodetection.enabled" value="true"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.1+12"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="Sent request for getting articles #1" classname="RunCucumberTest" time="6.233">
+    <failure message="expected:&lt;404&gt; but was:&lt;200&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<404> but was:<200>
+]]></failure>
+    <system-out><![CDATA[
+Scenario Template: Sent request for getting articles &amp#27;[90m# src/test/resourses/features/Article.feature:9&amp#27;[0m
+Request method:	GET
+Request URI:	https://www.healthcare.gov/api/article.json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Accept-Ranges: bytes
+Content-Type: text/html
+ETag: "363671576c0d012066c0b75461cf1805:1639649165.86183"
+Last-Modified: Thu, 16 Dec 2021 10:06:05 GMT
+Vary: Accept-Encoding
+Content-Encoding: gzip
+X-Akamai-Transformed: 9 - 0 pmb=mRUM,1
+Expires: Fri, 17 Dec 2021 08:13:24 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Fri, 17 Dec 2021 08:13:24 GMT
+Content-Length: 2877
+Connection: keep-alive
+Set-Cookie: optimizelyEndUserId=0c9854689d630000a446bc619901000021170000; expires=Sun, 17-Dec-2023 08:13:24 GMT; path=/; domain=.healthcare.gov; secure
+Set-Cookie: _ga=GA1.2.122603629.1639728804; expires=Sun, 17-Dec-2023 08:13:24 GMT; path=/; domain=.healthcare.gov; secure
+Set-Cookie: edgeip=23.13.254.64; expires=Fri, 17-Dec-2021 08:14:24 GMT; secure
+Set-Cookie: clientip=178.66.159.159; expires=Fri, 17-Dec-2021 08:14:24 GMT; secure
+Set-Cookie: requestid=13042a98.226843; expires=Fri, 17-Dec-2021 08:14:24 GMT; secure
+Set-Cookie: time=1639728804; expires=Fri, 17-Dec-2021 08:14:24 GMT; secure
+Set-Cookie: akavpau_vp1=1639729104~id=ed8a864329007cc550d3d391c477e201; Path=/; HttpOnly; Secure; SameSite=None
+Cache-Control: max-age=0, no-cache, no-store
+Strict-Transport-Security: max-age=31536000 ; preload
+X-XSS-Protection: 1; mode=block
+X-Permitted-Cross-Domain-Policies: master-only
+X-Frame-Options: SAMEORIGIN
+
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"/>
+    <title>Sorry, we can't find that page | HealthCare.gov</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+    <link rel="alternate" type="application/rss+xml" title="Health Insurance Blog - Healthcare.gov" href="/blog/blog.rss"/>
+    <link rel="P3Pv1" href="/w3c/p3p.xml"/>
+    <meta name="msvalidate.01" content="598A98B6EDF7624D92A421A892DC3A45"/>
+    <meta name="search-title" content="Sorry, we can't find that page"/>
+    <meta name="content-type" content="index"/>
+    <meta name="bite" content=""/>
+    <meta name="description" content=""/>
+    <meta property="og:title" content="Sorry, we can't find that page"/>
+    <meta property="og:type" content="index"/>
+    <meta property="og:image" content="https://www.healthcare.gov/images/logo.png"/>
+    <meta property="og:site_name" content="HealthCare.gov"/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:card" content=""/>
+    <meta name="twitter:url" content="HealthCare.gov"/>
+    <meta name="twitter:title" content="Sorry, we can't find that page"/>
+    <script>
+    window.baseUrl = "";
+  </script>
+    <script type="text/javascript" src="//tags.tiqcdn.com/utag/cmsgov/healthcare-learn/prod/utag.sync.js"/>
+    <script type="text/javascript" src="//assets.healthcare.gov/resources/libs/optimizely/optimizely.js"/>
+    <script type="text/javascript">var _sf_startpt = (new Date()).getTime();</script>
+    <script src="//assets.healthcare.gov/resources/libs/jquery/1.11/js/jquery.min.js"/>
+    <script src="//assets.healthcare.gov/resources/libs/bootstrap/3.1.1/js/bootstrap.min.js"/>
+    <script type="text/javascript" src="/js/all.js"/>
+    <link rel="publisher" href="//plus.google.com/112755994883163074657"/>
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+    <link href="/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+    <link href="/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="120x120"/>
+    <link href="/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+    <link href="/css/all-learn.css?v=1639587344" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/print.css" type="text/css" media="print"/>
+    <link rel="stylesheet" href="/css/bootstrap-accessibility.css"/>
+    <script>var w=window;if(w.performance||w.mozPerformance||w.msPerformance||w.webkitPerformance){var d=document;AKSB=w.AKSB||{},AKSB.q=AKSB.q||[],AKSB.mark=AKSB.mark||function(e,_){AKSB.q.push(["mark",e,_||(new Date).getTime()])},AKSB.measure=AKSB.measure||function(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.done=AKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte",(new Date).getTime()),AKSB.prof={custid:"226843",ustr:"",originlat:"0",clientrtt:"120",ghostip:"104.84.152.12",ipv6:false,pct:"10",clientip:"178.66.159.159",requestid:"13042a98",region:"28076",protocol:"",blver:14,akM:"",akN:"ae",akTT:"O",akTX:"1",akTI:"13042a98",ai:"203291",ra:"false",pmgn:"",pmgi:"",pmp:"",qc:""},function(e){var _=d.createElement("script");_.async="async",_.src=e;var t=d.getElementsByTagName("script"),t=t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"===d.location.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</script>
+  </head>
+  <body class="no-touch portal-id-learn" id="hcgov-learn">
+    <script type="text/javascript">
+  var utag_data = {"page_name":"learn: jeykll static learn page: Sorry, we can't find that page","content_language":"en","content_type":"jekyll static learn page","site_division":"learn","page_name":"page not found","site_section":"page not found","site_division":"page not found","content_type":"page not found"};
+  var domain = window.location.host;
+  var subdomain = domain.split(".")[0];
+  var pathParts = window.location.pathname.split("/");
+  var section = pathParts.filter(function (part) {
+    return part !== "" &amp;&amp; part !== "es";
+  })[0];
+  utag_data.site_domain = domain;
+  utag_data.site_environment = subdomain === "www" ? "production" : subdomain;
+  utag_data.site_section = utag_data.site_section || "learn: " + (section || "homepage");
+</script>
+    <script type="text/javascript">
+    (function(a,b,c,d){
+      a='//tags.tiqcdn.com/utag/cmsgov/healthcare-learn/'+(/www.healthcare.gov|www.cuidadodesalud.gov/.test(window.location.hostname)?'prod':'dev')+'/utag.js';
+      b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+      a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+    })();
+  </script>
+    <include src="/esi/header-learn.html"/>
+    <div class="main-body-content" id="main-body-content" role="main" tabindex="-1">
+      <div class="lite-card">
+        <div class="lite-card-inner">
+          <div class="container fourofour">
+            <h1>
+Sorry, we can't find that page              <br clear="none"/>
+on HealthCare.gov            </h1>
+            <p>
+We've recently reorganized our site, and that may explain it.              <br clear="none"/>
+It's also possible that you typed the address incorrectly.            </p>
+            <hr/>
+            <h3>Search HealthCare.gov</h3>
+            <div class="input-append">
+              <form enctype="application/x-www-form-urlencoded" method="get" class="gsearch" role="search" name="gsearch" action="/search">
+                <div class="col-sm-offset-3 col-sm-6 col-sm-offset-3">
+                  <div class="input-group">
+                    <input type="search" class="form-control nav-search" id="404-search" title="Site Search" name="q" placeholder="Search HealthCare.gov" autocomplete="off"/>
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn btn-blue btn-search" value="search">Search</button>
+                    </span>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div style="text-align: center; margin:  .25em auto; font: 80% normal Arial, Tahoma, sans serif; color: rgba(0, 0, 0, 0);">
+              <p>Please include the reference ID below if you wish to contact us at 1-800-318-2596 for support.</p>
+              <p>
+                <script language="javascript" type="text/javascript">
+    &lt;!--
+    document.write("Error from: " + escape(window.location.href));
+    // --&gt;
+  </script>
+                <br clear="none"/>
+ Reference ID:                 <span id="refId">Javascript is required to generate the reference ID.</span>
+              </p>
+              <script language="javascript" type="text/javascript" src="/js/gov.hc.diagnostic.js"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <include src="/esi/footer-full-learn.html"/>
+    <script src="/js/default.js"/>
+  </body>
+</html>
+11:13:23.281 [main] ERROR impl.ArticlesServiceImpl - Articles request exeption[Ljava.lang.StackTraceElement;@3ca9d3b2
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mGet Articles &amp#27;[0m&amp#27;[32m&amp#27;[1m"article.json"&amp#27;[0m&amp#27;[32m Request&amp#27;[0m          &amp#27;[90m# steps.ArticleMyStepdefs.getArticlesRequest(java.lang.String)&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mResponse code is: &amp#27;[0m&amp#27;[31m&amp#27;[1m"200"&amp#27;[0m                       &amp#27;[90m# steps.ArticleMyStepdefs.responseCodeIs(java.lang.String)&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: expected:<404> but was:<200>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at steps.ArticleMyStepdefs.responseCodeIs(ArticleMyStepdefs.java:31)
+	at вњЅ.Response code is: "200"(file:///C:/Users/Petr/IdeaProjects/CucumberTests/src/test/resourses/features/Article.feature:6)
+&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Sent request for getting articles #2" classname="RunCucumberTest" time="0.62"/>
+  <testcase name="Sent request for getting articles #3" classname="RunCucumberTest" time="0.53"/>
+</testsuite>

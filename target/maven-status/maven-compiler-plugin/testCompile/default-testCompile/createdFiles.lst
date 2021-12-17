@@ -1,0 +1,8 @@
+api\Article$ArticleBuilder.class
+impl\ArticlesServiceImpl.class
+config\TestConfig.class
+RunCucumberTest.class
+context\RunContext.class
+service\ArticlesService.class
+steps\ArticleMyStepdefs.class
+api\Article.class
